@@ -35,6 +35,9 @@
 - Array.every goes over every element in array and returns true based on some condition
 - **[Array.length - index - 1]** is a good way to go backways in a forward moving loop
 - **Math.floor(str.length / 2)** if you need half the length
+- **Math.sign** will return -1 or 1 if number is negative or positive
+- String(number) or .toString()
+- parseInt() vd Number --- any difference?
 
 # JEST Notes
 
