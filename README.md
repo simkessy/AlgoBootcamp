@@ -50,3 +50,8 @@
 - expect(fn(arg)).toBeTruthy()
 - expect(fn(arg)).toBeFalsy()
 - expect(typeof palindrome).toEqual('function')
+- beforeEach : Run a method before each test
+- afterEach : Run a method after each call
+- jest.spyOn(console, 'log'): watch the console.log method (creates a mock)
+  - fn.mockRestore(): restores the original (non-mocked) implementation.
+  - expect(console.log.mock.calls[0][0]).toEqual(1)
