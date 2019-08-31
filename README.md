@@ -31,6 +31,7 @@
 
 - Don't forget 0 index arrays so use (LENGTH-1) to stay within range
 - Try to use **for (let x of array) {}** syntax instead of traditional forLoops
+- **for(let x in obj)** let's you loop over objects - good for finding max in hasmap
 - Palindrome: reverse string and test if same as original
 - Array.every goes over every element in array and returns true based on some condition
 - **[Array.length - index - 1]** is a good way to go backways in a forward moving loop
@@ -38,6 +39,7 @@
 - **Math.sign** will return -1 or 1 if number is negative or positive
 - String(number) or .toString()
 - parseInt() vd Number --- any difference?
+- Build hash of count: **Array.reduce( (r,n)) => r[n] = ++r[n] || 1**;
 
 # JEST Notes
 
