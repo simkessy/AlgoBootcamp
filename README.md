@@ -34,6 +34,7 @@
 - Palindrome: reverse string and test if same as original
 - Array.every goes over every element in array and returns true based on some condition
 - **[Array.length - index - 1]** is a good way to go backways in a forward moving loop
+- **Math.floor(str.length / 2)** if you need half the length
 
 # JEST Notes
 

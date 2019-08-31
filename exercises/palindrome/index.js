@@ -51,8 +51,8 @@ function palindrome(str) {
   let halfLength = Math.floor(str.length / 2);
 
   // Check first and last and move in 1
-  // If not a match return false immediately
   for (let i = 0; i < halfLength; i++) {
+    // If not a match return false immediately
     if (str[i] !== str[str.length - i - 1]) return false;
   }
 
