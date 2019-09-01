@@ -45,6 +45,8 @@
 - Remove spaces in string: string.split(" ").join("")
 - Remove space and specials: string.replace(/[^\w]/g, "")
 - Anagrams: Once you've got sorted string just return stringA === stringB
+- Recursion: Think about your base case right away - don't blow your stack
+- Recursion: When calling recursively, make sure your args are different otherwise - infinite loop!
 
 # JEST Notes
 
