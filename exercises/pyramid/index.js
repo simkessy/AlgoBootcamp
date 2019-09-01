@@ -14,7 +14,7 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n, row = 0, stairs = "") {
+function pyramidBruteForce(n) {
   // Bail on first if n=1
   if (n === 1) return "#";
 
@@ -55,6 +55,54 @@ function pyramid(n, row = 0, stairs = "") {
     // Log out row
     console.log(row.join(""));
   }
+}
+
+function pyramidRecurr(n, row = 0) {
+  if (n === 1) return "#";
+  if (row >= n) return;
+  // Find middle
+  let midPoint = Math.floor((n * 2 - 1) / 2);
+  // create row given lenfth of n
+  let arrRow = new Array(n * 2 - 1).fill(" ");
+
+  // Set mid value
+  arrRow[midPoint] = "#";
+
+  // Spread out left / right based on mid and index
+  let leftPoint = midPoint - 1;
+  let rightPoint = midPoint + 1;
+  let leftMin = midPoint - row;
+  let rightMax = midPoint + row;
+
+  while (leftPoint >= leftMin && rightPoint <= rightMax) {
+    arrRow[leftPoint] = "#";
+    arrRow[rightPoint] = "#";
+
+    // Update left/right
+    leftPoint--;
+    rightPoint++;
+  }
+
+  console.log(arrRow.join(""));
+  pyramid(n, row + 1);
+}
+
+function pyramid(n, row = 0, level = "") {
+  if (row === n) return;
+
+  if (level.length === 2 * n - 1) {
+    console.log(level);
+    return pyramid(n, row + 1);
+  }
+
+  const midPoint = Math.floor((2 * n - 1) / 2);
+  let add;
+  if (midPoint - row <= level.length && midPoint + row >= level.length) {
+    add = "#";
+  } else {
+    add = " ";
+  }
+  pyramid(n, row, level + add);
 }
 
 module.exports = pyramid;
