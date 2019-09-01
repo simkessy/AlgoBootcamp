@@ -49,6 +49,9 @@
 - Recursion: When calling recursively, make sure your args are different otherwise - infinite loop!
 - Always consider **case** when dealing with strings
 - REGEX: str.match(/[aeiou]/gi); //g-don't stop at first //i-case insensitive
+- Fibonacci: 2 Solutions Brute Force & Recursion O(2^n) BAD!
+  - Recursion fn(n) =>{ if n< 2 return n; return fib(n-2 + fib(n-1))}
+  - **MEMOIZE** fib to only call fn w new args for massive speed improvements
 
 # JEST Notes
 
