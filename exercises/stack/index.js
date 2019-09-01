@@ -9,7 +9,75 @@
 //   s.push(2);
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+class Stack {
+  constructor() {
+    this.head = null;
+    this.last = null;
+    this.size;
+  }
+  // add item to head
+  push(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.last = newNode;
+    } else {
+      let oldHead = this.head;
+      this.head = newNode;
+      this.head.next = oldHead;
+    }
 
-class Stack {}
+    this.size++;
+  }
 
+  // remove item from head
+  pop() {
+    if (!this.head) return undefined;
+
+    let removed = this.head;
+
+    // If there's only 1 item clean up last
+    if (this.head === this.last) {
+      this.last = null;
+    }
+
+    this.head = removed.next;
+
+    this.size--;
+    removed.next = null;
+    return removed.val;
+  }
+
+  // return head without removing
+  peek() {
+    if (!this.head) return undefined;
+
+    return this.head.val;
+  }
+}
+
+class StackSimple {
+  constructor() {
+    this.data = [];
+  }
+
+  push(val) {
+    this.data.push(val);
+  }
+
+  pop() {
+    this.data.pop();
+  }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+}
+// stack = StackSimple;
 module.exports = Stack;
