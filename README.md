@@ -40,6 +40,8 @@
 - String(number) or .toString()
 - parseInt() vd Number --- any difference?
 - Build hash of count: **Array.reduce( (r,n)) => r[n] = ++r[n] || 1**;
+- Array.slice(start, end) => but NOT INCLUDING END
+- When using a WhileLoop do not forget to increment index to prevent infinite loop!
 
 # JEST Notes
 
