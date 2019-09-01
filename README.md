@@ -4,10 +4,8 @@
 
 ---
 
-- Unordered list can use asterisks
-- Unordered list can use asterisks
-- Unordered list can use asterisks
-- Unordered list can use asterisks
+- Queue: FIFO
+- Stack: LIFO
 
 ## Algorithms
 
@@ -52,6 +50,8 @@
 - Fibonacci: 2 Solutions Brute Force & Recursion O(2^n) BAD!
   - Recursion fn(n) =>{ if n< 2 return n; return fib(n-2 + fib(n-1))}
   - **MEMOIZE** fib to only call fn w new args for massive speed improvements
+- Pattern to join arrays:
+  - while(arr1.next() || arr2.next()) { if(arr.next(){}){} if(arr2.next(){})}
 
 # JEST Notes
 
