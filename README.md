@@ -8,6 +8,7 @@
 - Stack: LIFO
 - For both above don't forget to clean up if only 1 item on pop / dequeue / remove
   - ie: if(this.first === this.last)
+- Queue From Stack: use two stacks and reorg values from one to the other
 
 ## Algorithms
 
