@@ -42,6 +42,9 @@
 - Build hash of count: **Array.reduce( (r,n)) => r[n] = ++r[n] || 1**;
 - Array.slice(start, end) => but NOT INCLUDING END
 - When using a WhileLoop do not forget to increment index to prevent infinite loop!
+- Remove spaces in string: string.split(" ").join("")
+- Remove space and specials: string.replace(/[^\w]/g, "")
+- Anagrams: Once you've got sorted string just return stringA === stringB
 
 # JEST Notes
 
