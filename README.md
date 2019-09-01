@@ -47,6 +47,8 @@
 - Anagrams: Once you've got sorted string just return stringA === stringB
 - Recursion: Think about your base case right away - don't blow your stack
 - Recursion: When calling recursively, make sure your args are different otherwise - infinite loop!
+- Always consider **case** when dealing with strings
+- REGEX: str.match(/[aeiou]/gi); //g-don't stop at first //i-case insensitive
 
 # JEST Notes
 
