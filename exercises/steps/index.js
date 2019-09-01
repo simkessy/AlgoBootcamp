@@ -58,13 +58,15 @@ function steps(n, row = 0, stair = "") {
   }
 
   // Build string  until you hit n
-  if (stair.length <= row) {
-    stair += "#";
-  } else {
-    stair += " ";
-  }
+  //   if (stair.length <= row) {
+  //     stair += "#";
+  //   } else {
+  //     stair += " ";
+  //   }
 
-  steps(n, row, stair);
+  const add = stair.length <= row ? "#" : " ";
+
+  steps(n, row, stair + add);
 }
 // steps(3)
 //  n=3 row=0 stair=""
