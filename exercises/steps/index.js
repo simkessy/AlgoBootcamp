@@ -17,7 +17,8 @@
 //       '### '
 //       '####'
 
-/* function steps(n) {
+/* SIMPLER SOLUTION
+function steps(n) {
   // Create array with n needed and fill with spaces
   let stepArr = new Array(n).fill(" ");
   // Loop over each element
@@ -28,7 +29,8 @@
     // Join array
     console.log(stepArr.join(""));
   });
-} */
+} 
+*/
 
 // function steps(n) {
 //   for (let row = 0; row < n; row++) {
