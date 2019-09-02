@@ -10,6 +10,7 @@
   - ie: if(this.first === this.last)
 - Queue From Stack: use two stacks and reorg values from one to the other
 - Linked Lists:
+  - Midpoint: use the slow and fast technique (ie: slow = slow.next fast = fast.next.next)
 
 ## Algorithms
 
