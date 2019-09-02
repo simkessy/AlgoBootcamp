@@ -16,8 +16,12 @@
 - Trees:
   - Breath-First: like reading, start from top go left to right
     - Traversing: [root] > while(arr.length) > shift() + [].push(children) > cb(node)
-  - Depth0-First: Go top down top down from left to right
-    - - Traversing: [root] > while(arr.length) > shift() + [].unshift(children) > cb(node)
+  - Depth0-First: Go top down top down from left to right - Traversing: [root] > while(arr.length) > shift() + [].unshift(children) > cb(node)
+- Binary Search Tree:
+  - each node can only have 2 children
+  - LEFT node must be LESS than parent and root
+  - RIGHT node must be GREATER than parent and root
+  - Validate:
 
 ## Algorithms
 
