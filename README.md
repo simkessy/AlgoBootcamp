@@ -4,11 +4,12 @@
 
 ---
 
-- Queue: FIFO
-- Stack: LIFO
+- Queue: FIFO - could use node pattern (more efficient or array and their methods
+- Stack: LIFO - could use node pattern (more efficient or array and their methods
 - For both above don't forget to clean up if only 1 item on pop / dequeue / remove
   - ie: if(this.first === this.last)
 - Queue From Stack: use two stacks and reorg values from one to the other
+- Linked Lists:
 
 ## Algorithms
 
@@ -55,6 +56,8 @@
   - **MEMOIZE** fib to only call fn w new args for massive speed improvements
 - Pattern to join arrays:
   - while(arr1.next() || arr2.next()) { if(arr.next(){}){} if(arr2.next(){})}
+- fn.call vs fn.apply are the same except apply accepts an array: **fn.apply(this, [args])
+  **
 
 # JEST Notes
 
@@ -70,3 +73,4 @@
 - jest.spyOn(console, 'log'): watch the console.log method (creates a mock)
   - fn.mockRestore(): restores the original (non-mocked) implementation.
   - expect(console.log.mock.calls[0][0]).toEqual(1)
+- describe.skip skips tests
