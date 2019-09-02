@@ -23,13 +23,15 @@
   - RIGHT node must be GREATER than parent and root
   - Validate:
 
-## Algorithms
+## Sorting Algorithms
 
 ---
 
-- Unordered list can use asterisks
-- Unordered list can use asterisks
-- Unordered list can use asterisks
+- No one has ever been asking to implement a sorting algo
+- BubbleSort:
+- SelectionSort:
+- MergeSort:
+- QuickSort:
 
 ## LeetCode
 
