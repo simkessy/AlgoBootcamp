@@ -17,8 +17,8 @@
 //       '### '
 //       '####'
 
-/* SIMPLER SOLUTION
-function steps(n) {
+// SIMPLER SOLUTION
+function steps2(n) {
   // Create array with n needed and fill with spaces
   let stepArr = new Array(n).fill(" ");
   // Loop over each element
@@ -29,22 +29,21 @@ function steps(n) {
     // Join array
     console.log(stepArr.join(""));
   });
-} 
-*/
+}
 
-// function steps(n) {
-//   for (let row = 0; row < n; row++) {
-//     let stair = "";
-//     for (let col = 0; col < n; col++) {
-//       if (col <= row) {
-//         stair += "#";
-//       } else {
-//         stair += " ";
-//       }
-//     }
-//     console.log(stair);
-//   }
-// }
+function steps1(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = "";
+    for (let col = 0; col < n; col++) {
+      if (col <= row) {
+        stair += "#";
+      } else {
+        stair += " ";
+      }
+    }
+    console.log(stair);
+  }
+}
 
 function steps(n, row = 0, stair = "") {
   // Base case when n = row we're done

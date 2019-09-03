@@ -6,28 +6,23 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-/* 
-function reverse(str) {
+function reverse1(str) {
   return str
     .split("")
     .reverse()
     .join("");
-} 
-*/
+}
 
-/* 
-Use a loop an push to a new array backwards
-Don't forget arr.length-1
-function reverse(str) {
+// Use a loop an push to a new array backwards
+// Don't forget arr.length-1
+function reverse2(str) {
   let arr = [];
   for (let i = str.length - 1; i >= 0; i--) {
     arr.push(str[i]);
   }
   return arr.join("");
-} 
-*/
+}
 
-/* 
 function reverse(str) {
   let reversed = "";
 
@@ -37,8 +32,7 @@ function reverse(str) {
   }
 
   return reversed;
-} 
-*/
+}
 
 function reverse(str) {
   return str.split("").reduce((rev, char) => char + rev, "");

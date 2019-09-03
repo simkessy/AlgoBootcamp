@@ -7,42 +7,42 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-/* function palindrome(str) {
+function palindrome2(str) {
   // check if reversed version is same
   const reversed = str
     .split("")
     .reverse()
     .join("");
   return str === reversed;
-} */
+}
 
-// function palindrome(str) {
-//   // Test for strings with 3 or less characters and exit early
-//   if (str.length <= 3 && str[0] === str[str.length - 1]) return true;
+function palindrome2(str) {
+  // Test for strings with 3 or less characters and exit early
+  if (str.length <= 3 && str[0] === str[str.length - 1]) return true;
 
-//   // check if reversed version is same
-//   let right = [];
-//   let left = [];
+  // check if reversed version is same
+  let right = [];
+  let left = [];
 
-//   let halfLength = Math.floor(str.length / 2);
+  let halfLength = Math.floor(str.length / 2);
 
-//   // Get right array
-//   for (let i = 0; i < halfLength; i++) {
-//     right.push(str[i]);
-//   }
-//   // get left array reversed
-//   for (let j = str.length; j >= halfLength; j--) {
-//     left.push(str[j]);
-//   }
+  // Get right array
+  for (let i = 0; i < halfLength; i++) {
+    right.push(str[i]);
+  }
+  // get left array reversed
+  for (let j = str.length; j >= halfLength; j--) {
+    left.push(str[j]);
+  }
 
-//   right = right.join("");
-//   left = left.join("");
+  right = right.join("");
+  left = left.join("");
 
-//   console.log(str, halfLength, right, left, right === left);
+  console.log(str, halfLength, right, left, right === left);
 
-//   // check if left and right match
-//   return right === left;
-// }
+  // check if left and right match
+  return right === left;
+}
 
 // My version
 function palindrome(str) {

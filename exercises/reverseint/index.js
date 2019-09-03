@@ -8,17 +8,15 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-/* 
-    // This works but it's pretty ugly
-    // Essentailly, remove trailing 0
-    // Remove negative but store if it is negative
-    // Then reverse 
-    // If it is negative add back the minus symbol and return
-    // If not, just return the number
-    // Cast to string in between to manipulate, then cast back to number
+// This works but it's pretty ugly
+// Essentailly, remove trailing 0
+// Remove negative but store if it is negative
+// Then reverse
+// If it is negative add back the minus symbol and return
+// If not, just return the number
+// Cast to string in between to manipulate, then cast back to number
 
-
-function reverseInt(n) {
+function reverseInt2(n) {
   // Remove trailing 0
   n = String(n).split("")[n.length - 1] === 0 ? n.splice(n.length - 1, 1) : n;
 
@@ -43,7 +41,6 @@ function reverseInt(n) {
     return Number(numString);
   }
 }
- */
 
 function reverseInt(n) {
   const reversed = n

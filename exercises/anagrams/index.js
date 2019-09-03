@@ -20,98 +20,94 @@ function anagrams(stringA, stringB) {
   return cleanStr(stringA) === cleanStr(stringB);
 }
 
-// function anagrams(stringA, stringB) {
-//   // clean strings from spaces, turn into array and sort
-//   stringA = cleanStr(stringA)
-//     .sort()
-//     .join("");
-//   stringB = cleanStr(stringB)
-//     .sort()
-//     .join("");
+function anagrams1(stringA, stringB) {
+  // clean strings from spaces, turn into array and sort
+  stringA = cleanStr(stringA);
+  stringB = cleanStr(stringB);
 
-//   console.log(stringA, stringB);
-//   // If length not same exit
-//   if (stringA.length !== stringB.length) return false;
+  console.log(stringA, stringB);
+  // If length not same exit
+  if (stringA.length !== stringB.length) return false;
 
-//   // Compare each character --- THIS IS DUMB JUST RETURN WHETHER THE STRINGS MATCH
-//   for (let i = 0; i < stringA.length; i++) {
-//     // If they aren't the same return false
-//     if (stringA[i] !== stringB[i]) return false;
-//   }
+  // Compare each character --- THIS IS DUMB JUST RETURN WHETHER THE STRINGS MATCH
+  for (let i = 0; i < stringA.length; i++) {
+    // If they aren't the same return false
+    if (stringA[i] !== stringB[i]) return false;
+  }
 
-//   // If loop doesn't find different, return true
-//   return true;
-// }
+  // If loop doesn't find different, return true
+  return true;
+}
 
-// function anagrams(stringA, stringB) {
-//   // Remove spaces and special characters
-//   stringA = stringA
-//     .replace(/[^\w]/g, "")
-//     .toLowerCase()
-//     .split("");
-//   stringB = stringB
-//     .replace(/[^\w]/g, "")
-//     .toLowerCase()
-//     .split("");
+function anagrams2(stringA, stringB) {
+  // Remove spaces and special characters
+  stringA = stringA
+    .replace(/[^\w]/g, "")
+    .toLowerCase()
+    .split("");
+  stringB = stringB
+    .replace(/[^\w]/g, "")
+    .toLowerCase()
+    .split("");
 
-//   // create two hash maps
+  // create two hash maps
 
-//   let aMap = stringA.reduce((result, char) => {
-//     result[char] = ++result[char] || 1;
-//     return result;
-//   }, {});
+  let aMap = stringA.reduce((result, char) => {
+    result[char] = ++result[char] || 1;
+    return result;
+  }, {});
 
-//   let bMap = stringB.reduce((result, char) => {
-//     result[char] = ++result[char] || 1;
-//     return result;
-//   }, {});
+  let bMap = stringB.reduce((result, char) => {
+    result[char] = ++result[char] || 1;
+    return result;
+  }, {});
 
-//   // If number of keys is not the same then we don't have anagram
-//   if (Object.keys(stringA).length !== Object.keys(stringB).length) return false;
+  // If number of keys is not the same then we don't have anagram
+  if (Object.keys(stringA).length !== Object.keys(stringB).length) return false;
 
-//   // Test if keys match despite same number
-//   for (const key of Object.keys(aMap)) {
-//     if (!bMap[key]) return false;
-//   }
+  // Test if keys match despite same number
+  for (const key of Object.keys(aMap)) {
+    if (!bMap[key]) return false;
+  }
 
-//   console.log(aMap, bMap);
-//   // Loop over each key and make sure there's an equal value
-//   // if count is not equal then return false
-//   for (const char in aMap) {
-//     if (aMap[char] !== bMap[char]) return false;
-//   }
+  console.log(aMap, bMap);
+  // Loop over each key and make sure there's an equal value
+  // if count is not equal then return false
+  for (const char in aMap) {
+    if (aMap[char] !== bMap[char]) return false;
+  }
 
-//   return true;
-// }
+  return true;
+}
 
-// function anagrams(stringA, stringB) {
-//   const charMap = str => {
-//     return str.reduce((result, char) => {
-//       result[char] = ++result[char] || 1;
-//       return result;
-//     }, {});
-//   };
+function anagrams3(stringA, stringB) {
+  const charMap = str => {
+    return str.reduce((result, char) => {
+      result[char] = ++result[char] || 1;
+      return result;
+    }, {});
+  };
 
-//   const cleanStr = str => {
-//     return str
-//       .replace(/[^\w]/g, "")
-//       .toLowerCase()
-//       .split("");
-//   };
+  const cleanStr = str => {
+    return str
+      .replace(/[^\w]/g, "")
+      .toLowerCase()
+      .split("");
+  };
 
-//   let aMap = charMap(cleanStr(stringA));
-//   let bMap = charMap(cleanStr(stringB));
+  let aMap = charMap(cleanStr(stringA));
+  let bMap = charMap(cleanStr(stringB));
 
-//   // If number of keys is not the same then we don't have anagram
-//   if (Object.keys(aMap).length !== Object.keys(bMap).length) return false;
+  // If number of keys is not the same then we don't have anagram
+  if (Object.keys(aMap).length !== Object.keys(bMap).length) return false;
 
-//   console.log(aMap, bMap);
-//   // Loop over each key and make sure there's an equal value
-//   // if count is not equal then return false
-//   for (const char in aMap) {
-//     if (aMap[char] !== bMap[char]) return false;
-//   }
+  console.log(aMap, bMap);
+  // Loop over each key and make sure there's an equal value
+  // if count is not equal then return false
+  for (const char in aMap) {
+    if (aMap[char] !== bMap[char]) return false;
+  }
 
-//   return true;
-// }
+  return true;
+}
 module.exports = anagrams;

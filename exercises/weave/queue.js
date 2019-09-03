@@ -61,6 +61,7 @@ class Queue {
   }
 
   // Return first / head of queue - don't remove
+
   peek() {
     // if empty
     if (!this.first) return undefined;

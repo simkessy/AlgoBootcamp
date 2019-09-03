@@ -102,6 +102,7 @@ function pyramid(n, row = 0, level = "") {
   } else {
     add = " ";
   }
+  console.log(midPoint - row, midPoint + row, "row", row, level, level.length);
   pyramid(n, row, level + add);
 }
 

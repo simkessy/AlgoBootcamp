@@ -38,7 +38,7 @@ function vowels(str) {
   // g - don't stop are first
   // i - case insensitive
   // match returns [] or null
-  const matches = str.match(/[aeiou]/gi);
+  const matches = str.match(/[aeiou]/gi).length;
 
   return matches ? matches.length : 0;
 }
